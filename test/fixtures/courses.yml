@@ -1,0 +1,14 @@
+# Read about fixtures at
+# http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  c_id: MyString
+  c_type: MyString
+  c_code: MyString
+  c_name: MyString
+
+two:
+  c_id: MyString
+  c_type: MyString
+  c_code: MyString
+  c_name: MyString

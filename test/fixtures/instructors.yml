@@ -1,0 +1,18 @@
+# Read about fixtures at
+# http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  i_id: MyString
+  i_email: MyString
+  i_first: MyString
+  i_middle: MyString
+  i_last: MyString
+  i_type: MyString
+
+two:
+  i_id: MyString
+  i_email: MyString
+  i_first: MyString
+  i_middle: MyString
+  i_last: MyString
+  i_type: MyString

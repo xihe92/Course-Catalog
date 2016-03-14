@@ -1,0 +1,7 @@
+<h1>Welcome to Course Catalog</h1>
+
+<% if signed_in? %>
+  Email: <%= current_user.email %><br>
+  Your create date: <%= current_user.created_at %><br>
+  Last update date: <%= current_user.updated_at %><br>
+<%end%>
