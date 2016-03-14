@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.2.4'
 gem 'rails_12factor', group: :production
-gem 'sqlite3', group: :developmen
+gem 'sqlite3', group: :development
 gem 'pg', group: :production
 gem 'clearance'
 gem 'pry-byebug'
