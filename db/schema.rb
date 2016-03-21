@@ -13,16 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20160321022434) do
 
-  create_table "coursebelongs", force: :cascade do |t|
-    t.string   "c_code"
-    t.string   "s_id"
-    t.string   "c_name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string   "s_name"
-  end
-
   create_table "courses", force: :cascade do |t|
+    t.string   "c_id"
+    t.string   "c_type"
     t.string   "c_code"
     t.string   "c_name"
     t.datetime "created_at", null: false
