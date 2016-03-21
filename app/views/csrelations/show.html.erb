@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>C code:</strong>
+  <%= @csrelation.c_code %>
+</p>
+
+<p>
+  <strong>S:</strong>
+  <%= @csrelation.s_id %>
+</p>
+
+<p>
+  <strong>C name:</strong>
+  <%= @csrelation.c_name %>
+</p>
+
+<%= link_to 'Edit', edit_csrelation_path(@csrelation) %> |
+<%= link_to 'Back', csrelations_path %>

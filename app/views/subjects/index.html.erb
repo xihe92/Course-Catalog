@@ -5,10 +5,10 @@
 <table>
   <thead>
     <tr>
-      <th>S</th>
-      <th>S name</th>
-      <th>S type</th>
-      <th>S abbr</th>
+      <th>Subject ID</th>
+      <th>Subject Name</th>
+      <th>Subject Type</th>
+      <th>Subject Abbreviation</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,13 +16,13 @@
   <tbody>
     <% @subjects.each do |subject| %>
       <tr>
-        <td><%= subject.s_id %></td>
-        <td><%= subject.s_name %></td>
-        <td><%= subject.s_type %></td>
-        <td><%= subject.s_abbr %></td>
-        <td><%= link_to 'Show', subject %></td>
-        <td><%= link_to 'Edit', edit_subject_path(subject) %></td>
-        <td><%= link_to 'Destroy', subject, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td align="center"><%= subject.s_id %></td>
+        <td align="center"><%= subject.s_name %></td>
+        <td align="center"><%= subject.s_type %></td>
+        <td align="center"><%= subject.s_abbr %></td>
+        <td align="center"><%= link_to 'Show', subject %></td>
+        <td align="center"><%= link_to 'Edit', edit_subject_path(subject) %></td>
+        <td align="center"><%= link_to 'Destroy', subject, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

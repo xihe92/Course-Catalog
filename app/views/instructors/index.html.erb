@@ -5,12 +5,12 @@
 <table>
   <thead>
     <tr>
-      <th>I</th>
-      <th>I email</th>
-      <th>I first</th>
-      <th>I middle</th>
-      <th>I last</th>
-      <th>I type</th>
+      <th>Instructor ID</th>
+      <th>Instructor email</th>
+      <th>Instructor Firstname</th>
+      <th>Instructor Middlename</th>
+      <th>Instructor Lastname</th>
+      <th>Instructor Type</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,15 +18,15 @@
   <tbody>
     <% @instructors.each do |instructor| %>
       <tr>
-        <td><%= instructor.i_id %></td>
-        <td><%= instructor.i_email %></td>
-        <td><%= instructor.i_first %></td>
-        <td><%= instructor.i_middle %></td>
-        <td><%= instructor.i_last %></td>
-        <td><%= instructor.i_type %></td>
-        <td><%= link_to 'Show', instructor %></td>
-        <td><%= link_to 'Edit', edit_instructor_path(instructor) %></td>
-        <td><%= link_to 'Destroy', instructor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td align="center"><%= instructor.i_id %></td>
+        <td align="center"><%= instructor.i_email %></td>
+        <td align="center"><%= instructor.i_first %></td>
+        <td align="center"><%= instructor.i_middle %></td>
+        <td align="center"><%= instructor.i_last %></td>
+        <td align="center"><%= instructor.i_type %></td>
+        <td align="center"><%= link_to 'Show', instructor %></td>
+        <td align="center"><%= link_to 'Edit', edit_instructor_path(instructor) %></td>
+        <td align="center"><%= link_to 'Destroy', instructor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

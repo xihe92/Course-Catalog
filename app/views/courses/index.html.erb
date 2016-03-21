@@ -5,10 +5,8 @@
 <table>
   <thead>
     <tr>
-      <th>C</th>
-      <th>C type</th>
-      <th>C code</th>
-      <th>C name</th>
+      <th>Course code</th>
+      <th>Course name</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,13 +14,11 @@
   <tbody>
     <% @courses.each do |course| %>
       <tr>
-        <td><%= course.c_id %></td>
-        <td><%= course.c_type %></td>
-        <td><%= course.c_code %></td>
-        <td><%= course.c_name %></td>
-        <td><%= link_to 'Show', course %></td>
-        <td><%= link_to 'Edit', edit_course_path(course) %></td>
-        <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td align="center"><%= course.c_code %></td>
+        <td align="center"><%= course.c_name %></td>
+        <td align="center"><%= link_to 'Show', course %></td>
+        <td align="center"><%= link_to 'Edit', edit_course_path(course) %></td>
+        <td align="center"><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

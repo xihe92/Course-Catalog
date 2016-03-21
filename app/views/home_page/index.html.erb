@@ -4,4 +4,25 @@
   Email: <%= current_user.email %><br>
   Your create date: <%= current_user.created_at %><br>
   Last update date: <%= current_user.updated_at %><br>
+  <%if @result.size != 0%>
+  <table>
+    <tr>
+      <th>courseCode</th>
+      <th>courseName</th>
+      <th>subjectID</th>
+    </tr>
+    <tbody>
+      <%@result.each do |re|%>
+        <tr>
+          <td align="center"><%=re.c_code%></td>
+          <td align="center"><%=re.c_name%></td>
+          <td align="center"><%=re.s_id%></td>
+          <td align="center"><%= link_to 'Show', re %></td>
+          <td align="center"><%= link_to 'Edit', edit_enrollment_path(re) %></td>
+          <td align="center"><%= link_to 'Destroy', re, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <%end%>
+    </tbody>
+  </table>
+<%end%>
 <%end%>

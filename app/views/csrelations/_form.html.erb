@@ -1,0 +1,29 @@
+<%= form_for(@csrelation) do |f| %>
+  <% if @csrelation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@csrelation.errors.count, "error") %> prohibited this csrelation from being saved:</h2>
+
+      <ul>
+      <% @csrelation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :c_code %><br>
+    <%= f.text_field :c_code %>
+  </div>
+  <div class="field">
+    <%= f.label :s_id %><br>
+    <%= f.text_field :s_id %>
+  </div>
+  <div class="field">
+    <%= f.label :c_name %><br>
+    <%= f.text_field :c_name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

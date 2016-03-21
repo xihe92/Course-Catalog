@@ -1,0 +1,2 @@
+module CsrelationsHelper
+end

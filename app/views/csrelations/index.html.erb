@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Csrelations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>C code</th>
+      <th>S</th>
+      <th>C name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @csrelations.each do |csrelation| %>
+      <tr>
+        <td><%= csrelation.c_code %></td>
+        <td><%= csrelation.s_id %></td>
+        <td><%= csrelation.c_name %></td>
+        <td><%= link_to 'Show', csrelation %></td>
+        <td><%= link_to 'Edit', edit_csrelation_path(csrelation) %></td>
+        <td><%= link_to 'Destroy', csrelation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Csrelation', new_csrelation_path %>

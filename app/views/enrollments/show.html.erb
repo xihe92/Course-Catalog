@@ -1,0 +1,24 @@
+
+
+<p>
+  <strong>U:</strong>
+  <%= @enrollment.u_id %>
+</p>
+
+<p>
+  <strong>C code:</strong>
+  <%= @enrollment.c_code %>
+</p>
+
+<p>
+  <strong>C name:</strong>
+  <%= @enrollment.c_name %>
+</p>
+
+<p>
+  <strong>S:</strong>
+  <%= @enrollment.s_id %>
+</p>
+
+<%= link_to 'Edit', edit_enrollment_path(@enrollment) %> |
+<%= link_to 'Back', enrollments_path %>

@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :csrelations
+  get 'search/index'
+
+  resources :enrollments
   get 'home_page/index'
 
   resources :passwords, controller: "clearance/passwords", only: [:create, :new]
@@ -14,6 +18,7 @@ Rails.application.routes.draw do
   get "/sign_in" => "clearance/sessions#new", as: "sign_in"
   get "/sign_out" => "clearance/sessions#destroy", as: "sign_out"
   get "/sign_up" => "clearance/users#new", as: "sign_up"
+  get "/search/index", as: "search"
   resources :instructors
   resources :subjects
   resources :courses
