@@ -1,34 +1,11 @@
 <h1>Search</h1>
-
-
-<form name="query" action="/search/index">
+<form name="query" action="/search/search_result" class = "new_query" id="new_query">
   course:<br>
-  <input type="text" name="coursename"><br>
+  <input type="text" name="coursename" id="course"><br>
   subject:<br>
-  <select name="subjectid" >
+  <select name="subjectid" id="subject" >
     <option value="">chose here</option>
     <option value="<%=options_for_select(@showSub)%>"></option>
   </select><br>
-  <input type="submit" value="Search">
 </form>
-
-<%if @result != nil && @result.size != 0%>
-  <table>
-    <tr>
-      <th>courseID</th>
-      <th>courseName</th>
-      <th>subjectID</th>
-      <th>enrollment</th>
-    </tr>
-    <tbody>
-      <%@result.each do |re|%>
-        <tr>
-          <td align="center"><%=re.c_code%></td>
-          <td align="center"><%=re.c_name%></td>
-          <td align="center"><%=re.s_id%></td>
-          <td align="center"><%= button_to"Enroll",{:controller=>"enrollments", :action=>"create",:u_id=>current_user.email,:c_code=>re.c_code,:c_name=>re.c_name,:s_id=>re.s_id}%></td>
-        </tr>
-      <%end%>
-    </tbody>
-  </table>
-<%end%>
+<div id = "resulttable"></div>

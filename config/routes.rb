@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   get "/sign_out" => "clearance/sessions#destroy", as: "sign_out"
   get "/sign_up" => "clearance/users#new", as: "sign_up"
   get "/search/index", as: "search"
+  get "/search/search_result", as: "find_out"
   resources :instructors
   resources :subjects
   resources :courses

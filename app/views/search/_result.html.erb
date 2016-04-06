@@ -1,0 +1,20 @@
+<%if result != nil && result.size != 0%>
+  <table>
+    <tr>
+      <th>courseID</th>
+      <th>courseName</th>
+      <th>subjectID</th>
+      <th>enrollment</th>
+    </tr>
+    <tbody>
+      <%result.each do |re|%>
+        <tr>
+          <td align="center"><%=re.c_code%></td>
+          <td align="center"><%=re.c_name%></td>
+          <td align="center"><%=re.s_id%></td>
+          <td align="center"><%= button_to"Enroll",{:controller=>"enrollments", :action=>"create",:u_id=>current_user.email,:c_code=>re.c_code,:c_name=>re.c_name,:s_id=>re.s_id}%></td>
+        </tr>
+      <%end%>
+    </tbody>
+  </table>
+<%end%>
